@@ -23,6 +23,7 @@
     &__middle{
         justify-content: space-between;
         align-items: center;
+        padding: 54px 0;
     }
     &__search{
         background-color: $color-gray;
@@ -37,25 +38,22 @@
     &__description{
         padding-right: 48px;
         border-right: 1px solid #d1d1d1;
-        cursor: pointer;
-        position: relative;
-        &::before,
-        &::after{
-            content: '';
+        @include font(15px, 700);
+        &--drop{
+            display: none;
             position: absolute;
-            width: 6px;
-            height: 2px;
-            border-radius: 5px;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: $color-green;
-        }
-        &::before{
-            right: 28px;
-            transform: rotate(45deg);
-        }&::after{
-            right: 24px;
-            transform: rotate(-45deg);
+            left: -4px;
+            bottom: -120px;
+            background-color: $color-gray;
+            border: 1px solid #d1d1d1;
+            border-top: none;
+            border-radius: 0 0 15px 15px;
+            padding:0 20px;
+            li{
+                color: $color-black;
+                margin: 10px 0;
+                font: inherit;
+            }
         }
     }
     &__input{
@@ -66,6 +64,43 @@
     }
     &__person{
         margin-right: 42px;
+    }
+    &__basket{
+        position: relative;
+    }
+    &__menu{
+        display: flex;
+        padding: 16px 0;
+        &--items{
+            @include font(15px, 700);
+            margin-right: 54px;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+        .arrow{
+            &::before{
+                right: -12px;
+                transform: rotate(45deg);
+            }
+            &::after{
+                right: -15px;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    .basket__counter{
+        position: absolute;
+        left: -15px;
+        bottom: -3px;
+        min-width: 10px;
+        min-height: 10px;
+        padding: 1px 6px;
+        color: #fff;
+        background-color: #E5704B;
+        font-size: 12px;
+        border-radius: 50%;
+        transform: translateX(50%);
     }
 }
 .nav{

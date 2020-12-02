@@ -31,6 +31,47 @@ span {
   display: flex;
 }
 
+.relative {
+  position: relative;
+}
+
+.arrow {
+  position: relative;
+  cursor: pointer;
+}
+
+.arrow::before, .arrow::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 2px;
+  border-radius: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #6A983C;
+}
+
+.arrow::before {
+  right: 28px;
+  transform: rotate(45deg);
+}
+
+.arrow::after {
+  right: 24px;
+  transform: rotate(-45deg);
+}
+
+.btn__green {
+  color: #fff;
+  background-color: #6A983C;
+  border: 2px solid #46760A;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  padding: 12px 7px;
+}
+
 .header__top {
   margin: 16px 0;
   justify-content: space-between;
@@ -39,6 +80,7 @@ span {
 .header__top a {
   font-size: 12px;
   font-weight: 400;
+  font-family: sans-serif;
   color: #151515;
   transition: 0.3s;
 }
@@ -62,6 +104,7 @@ span {
 .header__middle {
   justify-content: space-between;
   align-items: center;
+  padding: 54px 0;
 }
 
 .header__search {
@@ -79,29 +122,27 @@ span {
 .header__description {
   padding-right: 48px;
   border-right: 1px solid #d1d1d1;
-  cursor: pointer;
-  position: relative;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: sans-serif;
 }
 
-.header__description::before, .header__description::after {
-  content: '';
+.header__description--drop {
+  display: none;
   position: absolute;
-  width: 6px;
-  height: 2px;
-  border-radius: 5px;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #6A983C;
+  left: -4px;
+  bottom: -120px;
+  background-color: #F9F9F9;
+  border: 1px solid #d1d1d1;
+  border-top: none;
+  border-radius: 0 0 15px 15px;
+  padding: 0 20px;
 }
 
-.header__description::before {
-  right: 28px;
-  transform: rotate(45deg);
-}
-
-.header__description::after {
-  right: 24px;
-  transform: rotate(-45deg);
+.header__description--drop li {
+  color: #151515;
+  margin: 10px 0;
+  font: inherit;
 }
 
 .header__input {
@@ -113,6 +154,50 @@ span {
 
 .header__person {
   margin-right: 42px;
+}
+
+.header__basket {
+  position: relative;
+}
+
+.header__menu {
+  display: flex;
+  padding: 16px 0;
+}
+
+.header__menu--items {
+  font-size: 15px;
+  font-weight: 700;
+  font-family: sans-serif;
+  margin-right: 54px;
+}
+
+.header__menu--items:last-child {
+  margin-right: 0;
+}
+
+.header__menu .arrow::before {
+  right: -12px;
+  transform: rotate(45deg);
+}
+
+.header__menu .arrow::after {
+  right: -15px;
+  transform: rotate(-45deg);
+}
+
+.header .basket__counter {
+  position: absolute;
+  left: -15px;
+  bottom: -3px;
+  min-width: 10px;
+  min-height: 10px;
+  padding: 1px 6px;
+  color: #fff;
+  background-color: #E5704B;
+  font-size: 12px;
+  border-radius: 50%;
+  transform: translateX(50%);
 }
 
 .nav__link {

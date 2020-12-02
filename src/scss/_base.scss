@@ -30,3 +30,40 @@ span {
 .row{
     display: flex;
 }
+
+.relative{
+    position: relative;
+}
+
+.arrow{
+    position: relative;
+    cursor: pointer;
+    &::before,
+        &::after{
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 2px;
+            border-radius: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: $color-green;
+        }
+        &::before{
+            right: 28px;
+            transform: rotate(45deg);
+        }
+        &::after{
+            right: 24px;
+            transform: rotate(-45deg);
+        }
+}
+
+.btn__green{
+    color: #fff;
+    background-color: $color-green;
+    border: 2px solid $color-darkgreen;
+    border-radius: 12px;
+    @include font(15px, 700, $font-poppins);
+    padding: 12px 7px;
+}

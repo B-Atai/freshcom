@@ -3,7 +3,10 @@ const Basket = () =>{
     basketBlock.innerHTML = `
     <div class="header__icons row">
         <div class="header__person"><img src="./src/images/person_icon.svg"></div>
-        <div class="header__basket"><img src="./src/images/basket_icon.svg"></div>
+        <div class="header__basket">
+            <img src="./src/images/basket_icon.svg">
+            <span class="basket__counter">0</span>
+        </div>
     </div>
     `;
     return basketBlock;

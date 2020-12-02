@@ -3,6 +3,7 @@ import Nav from "./nav.js";
 import Logo from "./logo.js";
 import Search from "./search.js";
 import Basket from "./basket.js";
+import Menu from "./menu.js";
 const Header = () => {
     const tagHeader = document.createElement('header');
     tagHeader.innerHTML = `
@@ -17,6 +18,7 @@ const Header = () => {
             ${Basket().outerHTML}
         </div>
         <div class="header__bottom row">
+            ${Menu().outerHTML}
         </div>
     </div>
     `;
