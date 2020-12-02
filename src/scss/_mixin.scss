@@ -1,0 +1,4 @@
+@mixin font($size, $weight: auto) {
+	font-size: $size;
+	font-weight: $weight;
+}

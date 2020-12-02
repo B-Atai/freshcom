@@ -1,0 +1,78 @@
+.header{
+    &__top{
+        margin: 16px 0;
+        justify-content: space-between;
+        a{
+            @include font(12px, 400);
+            color: $color-black;
+            transition: 0.3s;
+            &:hover{
+                color: $color-green;
+            }
+        }
+    }
+    &__contact{
+        display: flex;
+        li{
+            margin-right: 33px;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+    &__middle{
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__search{
+        background-color: $color-gray;
+        border: 1px solid #d1d1d1;
+        border-radius: 12px;
+        padding:11px 16px;
+        align-items: center;
+        label{
+            margin-left: 24px;
+        }
+    }
+    &__description{
+        padding-right: 48px;
+        border-right: 1px solid #d1d1d1;
+        cursor: pointer;
+        position: relative;
+        &::before,
+        &::after{
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 2px;
+            border-radius: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: $color-green;
+        }
+        &::before{
+            right: 28px;
+            transform: rotate(45deg);
+        }&::after{
+            right: 24px;
+            transform: rotate(-45deg);
+        }
+    }
+    &__input{
+        border: none;
+        outline: none;
+        padding-right: 72px;
+        background-color: $color-gray;
+    }
+    &__person{
+        margin-right: 42px;
+    }
+}
+.nav{
+    &__link{
+        margin-right: 38px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
