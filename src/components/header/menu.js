@@ -1,16 +1,19 @@
 const Menu = () =>{
-    const menuList = document.createElement('ul');
-    menuList.innerHTML = `
-        <li class="header__menu--items arrow">Bakery</li>
-        <li class="header__menu--items arrow">Fruit and vegetables</li>
-        <li class="header__menu--items arrow">Meat and fish</li>
-        <li class="header__menu--items arrow">Drinks</li>
-        <li class="header__menu--items arrow">Kitchen</li>
-        <li class="header__menu--items arrow">Special nutrition</li>
-        <li class="header__menu--items arrow">Baby</li>
-        <li class="header__menu--items arrow">Pharmacy</li>
-    `;
-    menuList.classList.add('header__menu')
+    const menuList = document.createElement('div');
+    menuList.className = 'header__menu'
+    const arrayOfTitles = ['Bakery', 'Fruit and vegetables', 'Meat and fish', 'Drinks','Kitchen', 'Special nutrition', 'Baby', 'Pharmacy'];
+    const arrayOflies = ['111', '222', '333', '444'];
+        for (let i = 0; i < 8; i++) {
+        const ul = document.createElement('ul');
+        ul.className = 'header__list';
+        ul.innerHTML = `
+            <h3 class="header__title arrow">${arrayOfTitles[i]}</h3>
+            <li class="header__items">${arrayOflies[0]}</li>
+            <li class="header__items">${arrayOflies[1]}</li>
+            <li class="header__items">${arrayOflies[2]}</li>
+        `;
+        menuList.append(ul);
+    }    
     return menuList;
 }
 export default Menu;

@@ -1,9 +1,12 @@
 const Search = () =>{
     const searchItem = document.createElement('div');
+    let p = document.createElement('p')
+    p.innerHTML = 'All categories';
+    p.className = 'header__description arrow'
+    searchItem.className = 'header__search row'
     searchItem.innerHTML = `
-    <div class="header__search row">
         <div class="relative">
-            <p id="categories" class="header__description arrow">All categories</p>
+            ${p.outerHTML}
             <ul class="header__description--drop" id="categories__drop">
                 <li>AAAAA</li>
                 <li>BBBBB</li>
@@ -14,7 +17,6 @@ const Search = () =>{
             <input type="text" class="header__input" placeholder="Search Products, categories ...">
         </label>
         <a href=""><img src="./src/images/search_icon.svg" class="header__icon"></a>
-    </div>
     `;
     return searchItem;
 }

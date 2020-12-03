@@ -24,6 +24,35 @@ const Header = () => {
     `;
     tagHeader.classList.add("header")
     document.body.append(tagHeader);
+    const headerDrop = () => {
+        let categoriesBtn = document.querySelector('.header__description')
+        const categoriesDown = document.getElementById('categories__drop')
+        categoriesBtn.addEventListener('click', () => {
+            categoriesDown.classList.toggle('is-down')
+        });
+    }
+    headerDrop();
+    const headerCounter =() => {
+        const addBtn = document.querySelectorAll('.btn__green');
+        const basketCount = document.querySelector('.basket__counter');
+        let counter = 0;
+        addBtn.forEach((button) => {
+            button.addEventListener('click', function () {
+            counter += 1;
+            basketCount.innerHTML= `${counter}`;
+            });
+        });
+    }
+    headerCounter()
+    const add = () => {
+        const addList = document.querySelectorAll('.header__list');
+        const li = document.querySelectorAll('.header__items');
+        addList.forEach((item) =>
+            item.addEventListener('click', () => {
+                item.classList.toggle('is-active')
+        }))
+    }
+    add();
     return tagHeader;
 }
 Header();

@@ -1,5 +1,6 @@
 const Nav = () =>{
     const navList = document.createElement('nav');
+    navList.className = 'nav'
     navList.innerHTML = `
     <ul class="nav__menu row">
         <li class="nav__link"><a href="#">Blog</a></li>
@@ -7,7 +8,6 @@ const Nav = () =>{
         <li class="nav__link"><a href="#">Careers</a></li>
     </ul>
     `;
-    navList.classList.add('nav')
     return navList;
 }
 Nav();

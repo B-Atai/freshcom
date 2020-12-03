@@ -131,18 +131,24 @@ span {
   display: none;
   position: absolute;
   left: -4px;
-  bottom: -120px;
+  top: 31px;
   background-color: #F9F9F9;
   border: 1px solid #d1d1d1;
   border-top: none;
   border-radius: 0 0 15px 15px;
-  padding: 0 20px;
+  text-align: center;
+  width: 70%;
 }
 
 .header__description--drop li {
   color: #151515;
   margin: 10px 0;
   font: inherit;
+}
+
+.header__description--drop.is-down {
+  display: block;
+  z-index: 1;
 }
 
 .header__input {
@@ -165,28 +171,37 @@ span {
   padding: 16px 0;
 }
 
-.header__menu--items {
+.header__list {
   font-size: 15px;
   font-weight: 700;
   font-family: sans-serif;
   margin-right: 54px;
 }
 
-.header__menu--items:last-child {
+.header__list:last-child {
   margin-right: 0;
 }
 
-.header__menu .arrow::before {
-  right: -12px;
-  transform: rotate(45deg);
+.header__list li {
+  margin-top: 10px;
+  display: none;
+  width: 100%;
+  text-align: center;
 }
 
-.header__menu .arrow::after {
-  right: -15px;
-  transform: rotate(-45deg);
+.header__list.is-active li {
+  display: block;
 }
 
-.header .basket__counter {
+.header__title.arrow::before {
+  right: -10px;
+}
+
+.header__title.arrow::after {
+  right: -14px;
+}
+
+.basket__counter {
   position: absolute;
   left: -15px;
   bottom: -3px;
