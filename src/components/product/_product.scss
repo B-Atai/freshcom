@@ -1,0 +1,32 @@
+.product{
+    border: 1px solid #d1d1d1;
+    border-radius: 12px;
+    margin:0 16px;
+    &__item{
+        padding: 16px;
+    }
+    &__picture{
+        margin: 0 auto;
+    }
+    &__title{
+        @include font(15px, 500, $font-poppins);
+        margin-top: 16px;
+        line-height: 22px;
+        color: $color-black;
+    }
+    &__description{
+        @include font(12px, 400, $font-open);
+        margin: 4px 0 16px;
+        line-height: 16px;
+        color: #575757;
+    }
+    &__value{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__price{
+        @include font(18px, 600, $font-poppins);
+        line-height: 27px;
+    }
+}

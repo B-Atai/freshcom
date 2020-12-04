@@ -1,0 +1,33 @@
+.customers{
+    margin-top: 142px;
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title{
+        @include font(18px, 600, $font-poppins);
+        line-height: 27px;
+        color: $color-black;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 16px;
+        border: 1px solid $color-gray;
+    }
+    .arrow__black{
+        &::before{
+            top: 14px;
+            transform: rotate(45deg);
+        }
+        &::after{
+            top: 17px;
+            transform: rotate(-45deg);
+        }
+    }
+}
+.slider{
+    margin: 0 -16px;
+}

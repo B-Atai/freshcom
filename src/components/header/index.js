@@ -32,18 +32,6 @@ const Header = () => {
         });
     }
     headerDrop();
-    const headerCounter =() => {
-        const addBtn = document.querySelectorAll('.btn__green');
-        const basketCount = document.querySelector('.basket__counter');
-        let counter = 0;
-        addBtn.forEach((button) => {
-            button.addEventListener('click', function () {
-            counter += 1;
-            basketCount.innerHTML= `${counter}`;
-            });
-        });
-    }
-    headerCounter()
     const add = () => {
         const addList = document.querySelectorAll('.header__list');
         const li = document.querySelectorAll('.header__items');

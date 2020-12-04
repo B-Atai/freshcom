@@ -99,7 +99,13 @@ span {
   font-size: 15px;
   font-weight: 700;
   font-family: "Poppins", sans-serif;
-  padding: 12px 7px;
+  padding: 7px 12px;
+  transition: 0.3s;
+}
+
+.btn__green:hover {
+  color: #6A983C;
+  background-color: #fff;
 }
 
 .btn__gray {
@@ -121,8 +127,32 @@ span {
   color: #F5F5F5;
 }
 
+.btn__plain {
+  padding: 6px 34px 6px 12px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  line-height: 22px;
+  transition: 0.3s;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.btn__plain a {
+  color: #151515;
+}
+
+.btn__plain a:hover {
+  color: #6A983C;
+}
+
 .col-3 {
   width: 25%;
+}
+
+.col-4 {
+  width: 33%;
 }
 
 .col-6 {
@@ -379,4 +409,105 @@ span {
 
 .sidebar__links:hover {
   color: #151515;
+}
+
+.selling {
+  margin-top: 132px;
+}
+
+.selling__block {
+  margin: 0 -16px;
+}
+
+.product {
+  border: 1px solid #d1d1d1;
+  border-radius: 12px;
+  margin: 0 16px;
+}
+
+.product__item {
+  padding: 16px;
+}
+
+.product__picture {
+  margin: 0 auto;
+}
+
+.product__title {
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  margin-top: 16px;
+  line-height: 22px;
+  color: #151515;
+}
+
+.product__description {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  margin: 4px 0 16px;
+  line-height: 16px;
+  color: #575757;
+}
+
+.product__value {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product__price {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  line-height: 27px;
+}
+
+.farmes {
+  margin-top: 132px;
+}
+
+.farmes__block {
+  margin: 0 -16px;
+}
+
+.customers {
+  margin-top: 142px;
+}
+
+.customers__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.customers__title {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  line-height: 27px;
+  color: #151515;
+}
+
+.customers__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 16px;
+  border: 1px solid #F9F9F9;
+}
+
+.customers .arrow__black::before {
+  top: 14px;
+  transform: rotate(45deg);
+}
+
+.customers .arrow__black::after {
+  top: 17px;
+  transform: rotate(-45deg);
+}
+
+.slider {
+  margin: 0 -16px;
 }
