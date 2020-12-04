@@ -1,0 +1,45 @@
+.hero{
+    margin-top: 64px;
+    &__item{
+        margin: 0 -15px;
+    }
+    &__banners{
+        padding: 48px 0 0 33px;
+        background-color: #ddd;
+        border-radius: 12px;
+        margin: 0 15px;
+    }
+    &__suptitle{
+        @include font(12px, 600, $font-poppins);
+        color: $color-green;
+    }
+    &__title{
+        @include font(22px, 600, $font-poppins);
+        margin: 8px 0 106px;
+    }
+    &__btn{
+        @include font(15px, 700, $font-poppins);
+        border: 2px solid $color-darkgreen;
+        padding: 12px 38px 12px 16px;
+        background-color: transparent;
+        border-radius: 12px;
+        transition: 0.3s;
+        &.arrow{
+            &::before{
+                right: 22px;
+                top: 22px;
+                transform: rotate(45deg);
+            }
+            &::after{
+                right: 22px;
+                top: 25px;
+                transform: rotate(-45deg);
+            }
+        }
+        &:hover{
+            color: $color-darkgreen;
+            border-color: $color-black;
+            background-color: $color-black;;
+        }
+    }
+}

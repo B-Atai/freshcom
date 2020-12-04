@@ -1,0 +1,16 @@
+.sidebar{
+    &__title{
+        @include font(18px, 600);
+        margin-bottom: 16px;
+    }
+    &__links{
+        @include font(14px, 400);
+        margin-bottom: 12px;
+        text-decoration: underline;
+        color:$color-green;
+        transition: 0.3s;
+        &:hover{
+            color: $color-black;
+        }
+    }
+}

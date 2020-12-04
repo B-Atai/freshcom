@@ -52,13 +52,43 @@ span {
 }
 
 .arrow::before {
-  right: 28px;
+  right: 29px;
   transform: rotate(45deg);
 }
 
 .arrow::after {
-  right: 24px;
+  right: 26px;
   transform: rotate(-45deg);
+}
+
+.arrow__black {
+  position: relative;
+  cursor: pointer;
+}
+
+.arrow__black::before, .arrow__black::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 2px;
+  border-radius: 5px;
+  right: 22px;
+  background-color: #151515;
+  transition: 0.3s;
+}
+
+.arrow__black::before {
+  top: 22px;
+  transform: rotate(45deg);
+}
+
+.arrow__black::after {
+  top: 25px;
+  transform: rotate(-45deg);
+}
+
+.arrow__black:hover::before, .arrow__black:hover::after {
+  background-color: #F5F5F5;
 }
 
 .btn__green {
@@ -70,6 +100,37 @@ span {
   font-weight: 700;
   font-family: "Poppins", sans-serif;
   padding: 12px 7px;
+}
+
+.btn__gray {
+  background-color: #F5F5F5;
+  border-radius: 12px;
+  color: #151515;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  padding: 12px 38px 12px 16px;
+  border: none;
+  outline: none;
+  margin-top: 48px;
+  transition: 0.3s;
+}
+
+.btn__gray:hover {
+  background-color: #151515;
+  color: #F5F5F5;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-9 {
+  width: 75%;
 }
 
 .header__top {
@@ -105,6 +166,11 @@ span {
   justify-content: space-between;
   align-items: center;
   padding: 54px 0;
+  border-top: 1px solid rgba(21, 21, 21, 0.1);
+}
+
+.header__bottom {
+  background-color: #F9F9F9;
 }
 
 .header__search {
@@ -125,6 +191,11 @@ span {
   font-size: 15px;
   font-weight: 700;
   font-family: sans-serif;
+  transition: 0.3s;
+}
+
+.header__description:hover {
+  color: #6A983C;
 }
 
 .header__description--drop {
@@ -193,12 +264,20 @@ span {
   display: block;
 }
 
+.header__title {
+  transition: 0.3s;
+}
+
 .header__title.arrow::before {
   right: -10px;
 }
 
 .header__title.arrow::after {
   right: -14px;
+}
+
+.header__title:hover {
+  color: #6A983C;
 }
 
 .basket__counter {
@@ -221,4 +300,83 @@ span {
 
 .nav__link:last-child {
   margin-right: 0;
+}
+
+.hero {
+  margin-top: 64px;
+}
+
+.hero__item {
+  margin: 0 -15px;
+}
+
+.hero__banners {
+  padding: 48px 0 0 33px;
+  background-color: #ddd;
+  border-radius: 12px;
+  margin: 0 15px;
+}
+
+.hero__suptitle {
+  font-size: 12px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #6A983C;
+}
+
+.hero__title {
+  font-size: 22px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  margin: 8px 0 106px;
+}
+
+.hero__btn {
+  font-size: 15px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  border: 2px solid #46760A;
+  padding: 12px 38px 12px 16px;
+  background-color: transparent;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.hero__btn.arrow::before {
+  right: 22px;
+  top: 22px;
+  transform: rotate(45deg);
+}
+
+.hero__btn.arrow::after {
+  right: 22px;
+  top: 25px;
+  transform: rotate(-45deg);
+}
+
+.hero__btn:hover {
+  color: #46760A;
+  border-color: #151515;
+  background-color: #151515;
+}
+
+.sidebar__title {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: sans-serif;
+  margin-bottom: 16px;
+}
+
+.sidebar__links {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: sans-serif;
+  margin-bottom: 12px;
+  text-decoration: underline;
+  color: #6A983C;
+  transition: 0.3s;
+}
+
+.sidebar__links:hover {
+  color: #151515;
 }

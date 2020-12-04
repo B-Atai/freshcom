@@ -24,6 +24,10 @@
         justify-content: space-between;
         align-items: center;
         padding: 54px 0;
+        border-top: 1px solid rgba(21, 21, 21, 0.1);
+    }
+    &__bottom{
+        background-color: $color-gray;
     }
     &__search{
         background-color: $color-gray;
@@ -39,6 +43,10 @@
         padding-right: 48px;
         border-right: 1px solid #d1d1d1;
         @include font(15px, 700);
+        transition: 0.3s;
+        &:hover{
+            color: $color-green;
+        }
         &--drop{
             display: none;
             position: absolute;
@@ -96,6 +104,7 @@
         }
     }
     &__title{
+        transition: 0.3s;
         &.arrow{
             &::before{
                 right: -10px;
@@ -103,6 +112,9 @@
             &::after{
                 right: -14px;
             }
+        }
+        &:hover{
+            color: $color-green;
         }
     }
 }

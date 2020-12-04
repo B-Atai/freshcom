@@ -6,6 +6,7 @@ import Basket from "./basket.js";
 import Menu from "./menu.js";
 const Header = () => {
     const tagHeader = document.createElement('header');
+    tagHeader.className = 'header';
     tagHeader.innerHTML = `
     <div class="container">
         <div class="header__top row">
@@ -22,7 +23,6 @@ const Header = () => {
         </div>
     </div>
     `;
-    tagHeader.classList.add("header")
     document.body.append(tagHeader);
     const headerDrop = () => {
         let categoriesBtn = document.querySelector('.header__description')

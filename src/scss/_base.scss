@@ -50,13 +50,42 @@ span {
             background-color: $color-green;
         }
         &::before{
-            right: 28px;
+            right: 29px;
             transform: rotate(45deg);
         }
         &::after{
-            right: 24px;
+            right: 26px;
             transform: rotate(-45deg);
         }
+}
+.arrow__black{
+    position: relative;
+    cursor: pointer;
+    &::before,
+    &::after{
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 2px;
+        border-radius: 5px;
+        right: 22px;
+        background-color: $color-black;
+        transition: 0.3s;
+    }
+    &::before{
+        top: 22px;
+        transform: rotate(45deg);
+    }
+    &::after{
+        top: 25px;
+        transform: rotate(-45deg);
+    }
+    &:hover{
+        &::before,
+        &::after{
+            background-color: $color-lightgray;
+        }
+    }
 }
 
 .btn__green{
@@ -66,4 +95,19 @@ span {
     border-radius: 12px;
     @include font(15px, 700, $font-poppins);
     padding: 12px 7px;
+}
+.btn__gray{
+    background-color: $color-lightgray;
+    border-radius: 12px;
+    color: $color-black;
+    @include font(15px, 700, $font-poppins);
+    padding: 12px 38px 12px 16px;
+    border: none;
+    outline: none;
+    margin-top: 48px;
+    transition: 0.3s;
+    &:hover{
+        background-color: $color-black;
+        color: $color-lightgray;
+    }
 }

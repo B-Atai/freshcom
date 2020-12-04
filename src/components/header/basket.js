@@ -3,10 +3,10 @@ const Basket = () =>{
     basketBlock.className = 'header__icons row'
     basketBlock.innerHTML = `
     <div class="header__person">
-        <img src="./src/images/person_icon.svg">
+        <a href="#"><img src="./src/images/person_icon.svg"></a>
     </div>
     <div class="header__basket">
-        <img src="./src/images/basket_icon.svg">
+        <a href="#"><img src="./src/images/basket_icon.svg"></a>
         <span class="basket__counter">0</span>
     </div>
     `;
