@@ -27,7 +27,33 @@
             transform: rotate(-45deg);
         }
     }
+    &__item{
+        display: flex !important;
+        justify-content: center;
+        position: relative;
+        border: 1px solid #f1f1f1;
+        border-radius: 12px;
+        padding: 24px 32px 40px 32px;
+        margin-bottom: 25px;
+    }
+    &__description{
+        text-align: center;
+        width: 80%;
+        @include font(15px,500,$font-poppins);
+        color: $color-black;
+    }
+    &__name{
+        @include font(12px,600,$font-poppins);
+        color: #A9A9A9;
+        margin: 24px 0 16px;
+    }
+    &__img{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -25px;
+    }
 }
 .slider{
-    margin: 0 -16px;
+    margin: 41px -16px 0 -16px;
 }

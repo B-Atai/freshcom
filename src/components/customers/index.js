@@ -4,7 +4,7 @@ const Customers = () => {
     tagCustomers.innerHTML = `
     <div class="container">
         <div class="row customers__top">
-            <h3 class="customers__title">Section Headline</h3>
+            <h3 class="customers__title">Our customers says</h3>
             <button class="btn__plain arrow__black"><a href="#">Button</a></button>
         </div>
     </div>
@@ -16,7 +16,7 @@ const Customers = () => {
                 You will get all what you need by writiing a text here“
                 </p>
                 <p class="customers__name">Name and Surname</p>
-                <img src="./src/images/customer_1.png">
+                <img src="./src/images/customer_1.png" class="customers__img">
             </div>
             <div class="customers__item col-3">
                 <p class="customers__description">
@@ -25,7 +25,7 @@ const Customers = () => {
                 You will get all what you need by writiing a text here“
                 </p>
                 <p class="customers__name">Name and Surname</p>
-                <img src="./src/images/customer_2.png">
+                <img src="./src/images/customer_2.png" class="customers__img">
             </div>
             <div class="customers__item col-3">
                 <p class="customers__description">
@@ -34,7 +34,7 @@ const Customers = () => {
                 You will get all what you need by writiing a text here“
                 </p>
                 <p class="customers__name">Name and Surname</p>
-                <img src="./src/images/customer_1.png">
+                <img src="./src/images/customer_1.png" class="customers__img">
             </div>
             <div class="customers__item col-3">
                 <p class="customers__description">
@@ -43,7 +43,7 @@ const Customers = () => {
                 You will get all what you need by writiing a text here“
                 </p>
                 <p class="customers__name">Name and Surname</p>
-                <img src="./src/images/customer_2.png">
+                <img src="./src/images/customer_2.png" class="customers__img">
             </div>
         </div>
     `;
@@ -51,3 +51,11 @@ const Customers = () => {
     return tagCustomers;
 }
 Customers();
+
+$(document).ready(function(){
+    $('.slider').slick({
+      arrows:true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+    });
+  });

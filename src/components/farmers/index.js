@@ -22,7 +22,6 @@ const Farmers = () => {
     document.body.append(tagFarm);
     const headerCounter =() => {
         const addBtn = document.querySelectorAll('.btn__green');
-        console.log(addBtn)
         const basketCount = document.querySelector('.basket__counter');
         let counter = 0;
         addBtn.forEach((button) => {
