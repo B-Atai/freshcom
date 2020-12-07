@@ -7,7 +7,7 @@ const Hero = () => {
     <div class="container">
         <div class="row">
             <div class="col-3">
-                ${Sidebar}
+                ${Sidebar('Category menu','Bakery','Fruit and vegetables','Meat and fish','Drinks','Kitchen')}
             </div>
             <div class="col-9 row hero__item">
                 ${Banner}

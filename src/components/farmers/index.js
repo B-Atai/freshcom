@@ -1,7 +1,5 @@
 import Sidebar from "../sidebar/sidebar.js";
-import Product_1 from "../product/product_1.js";
-import Product_2 from "../product/product_2.js";
-import Product_3 from "../product/product_3.js";
+import Product from "../product/product.js";
 const Farmers = () => {
     const tagFarm = document.createElement('section');
     tagFarm.className = "farmes";
@@ -9,12 +7,12 @@ const Farmers = () => {
     <div class="container">
         <div class="row">
             <div class="col-3">
-                ${Sidebar}
+                ${Sidebar('Best from Farmers','Carrots','Tomatoes','Potatoes','Chicken','Pork')}
             </div>
             <div class="col-9 row selling__block">
-                ${Product_1}
-                ${Product_2}
-                ${Product_3}
+                ${Product('1.48 USD')}
+                ${Product('0.28 USD')}
+                ${Product('1.12 USD')}
             </div>
         </div>
     </div>

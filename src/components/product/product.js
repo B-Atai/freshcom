@@ -1,4 +1,4 @@
-const Product_3 = () => {
+const Product = (price) => {
     const product = document.createElement('div');
     product.className = "product";
     product.innerHTML = `
@@ -8,7 +8,7 @@ const Product_3 = () => {
             <h3 class="product__title">Product Title</h3>
             <p class="product__description">Space for a small product description </p>
             <div class="product__value row">
-                <span class="product__price">1.12 USD</span>
+                <span class="product__price">${price}</span>
                 <button class="btn__green">Buy now</button>
             </div>
         </div>
@@ -16,4 +16,4 @@ const Product_3 = () => {
     `;
     return product.outerHTML;
 }
-export default Product_3();
+export default Product;

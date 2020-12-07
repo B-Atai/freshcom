@@ -45,6 +45,24 @@ const Customers = () => {
                 <p class="customers__name">Name and Surname</p>
                 <img src="./src/images/customer_2.png" class="customers__img">
             </div>
+            <div class="customers__item col-3">
+                <p class="customers__description">
+                “This is an super space for your customers qoute. 
+                Don’t worry it works smooth as pie.
+                You will get all what you need by writiing a text here“
+                </p>
+                <p class="customers__name">Name and Surname</p>
+                <img src="./src/images/customer_1.png" class="customers__img">
+            </div>
+            <div class="customers__item col-3">
+                <p class="customers__description">
+                “This is an super space for your customers qoute. 
+                Don’t worry it works smooth as pie.
+                You will get all what you need by writiing a text here“
+                </p>
+                <p class="customers__name">Name and Surname</p>
+                <img src="./src/images/customer_2.png" class="customers__img">
+            </div>
         </div>
     `;
     document.body.append(tagCustomers);
@@ -57,5 +75,6 @@ $(document).ready(function(){
       arrows:true,
       slidesToShow: 3,
       slidesToScroll: 1,
+      centerMode: true,
     });
   });
