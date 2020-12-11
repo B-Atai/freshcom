@@ -15,7 +15,7 @@ const Sidebar = (title, listItems, buttonText) =>{
                 return li.outerHTML;
             }).join('')}
         </ul>
-        <button class="btn__gray arrow__black">${buttonText} </button>
+        <button class="btn__gray arrow__horizontal">${buttonText} </button>
     `;
     return sidebar.outerHTML;
 }

@@ -1,10 +1,21 @@
 .headline{
     margin-top: 160px;
     &__top{
+        align-items: center;
         justify-content: space-between;
         margin-bottom: 37px;
     }
     &__content{
         margin: 0 -16px;
+    }
+    .arrow__horizontal{
+        &::before{
+            top: 15px;
+            transform: rotate(45deg);
+        }
+        &::after{
+            top: 19px;
+            transform: rotate(-45deg);
+        }
     }
 }

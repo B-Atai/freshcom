@@ -16,19 +16,6 @@ const Selling = () => {
         </div>
     </div>
     `;
-    document.body.append(tagSelling);
-    const headerCounter =() => {
-        const addBtn = document.querySelectorAll('.btn__green');
-        const basketCount = document.querySelector('.basket__counter');
-        let counter = 0;
-        addBtn.forEach((button) => {
-            button.addEventListener('click', function () {
-            counter += 1;
-            basketCount.innerHTML= `${counter}`;
-            });
-        });
-    }
-    headerCounter()
-    return tagSelling;
+    return tagSelling.outerHTML;
 }
 export default Selling;

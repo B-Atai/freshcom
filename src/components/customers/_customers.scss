@@ -17,13 +17,13 @@
         margin: 0 16px;
         border: 1px solid $color-gray;
     }
-    .arrow__black{
+    .arrow__horizontal{
         &::before{
             top: 14px;
             transform: rotate(45deg);
         }
         &::after{
-            top: 17px;
+            top: 18px;
             transform: rotate(-45deg);
         }
     }
@@ -53,6 +53,11 @@
         left: 50%;
         transform: translateX(-50%);
         bottom: -25px;
+    }
+    .btn__green{
+        &:hover{
+            color: $color-green;
+        }
     }
 }
 .slider{

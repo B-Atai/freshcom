@@ -17,7 +17,6 @@ const Hero = () => {
         </div>
     </div>
     `;
-    document.body.append(tagHero);
-    return tagHero;
+    return tagHero.outerHTML;
 }
 export default Hero;
