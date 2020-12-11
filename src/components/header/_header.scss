@@ -35,45 +35,64 @@
         border-radius: 12px;
         padding:11px 16px;
         align-items: center;
-        label{
-            margin-left: 24px;
-        }
     }
     &__description{
         padding-right: 48px;
-        border-right: 1px solid #d1d1d1;
         @include font(15px, 700);
         transition: 0.3s;
         &:hover{
-            color: $color-green;
+            transform: scale(0.95);
         }
         &--drop{
             display: none;
             position: absolute;
-            left: -4px;
+            left: -10px;
             top: 31px;
             background-color: $color-gray;
             border: 1px solid #d1d1d1;
             border-top: none;
             border-radius: 0 0 15px 15px;
             text-align: center;
-            width: 70%;
+            width: 100%;
             li{
                 color: $color-black;
-                margin: 10px 0;
+                padding: 10px 0;
                 font: inherit;
             }
             &.is-down{
                 display: block;
                 z-index: 1;
+                li{
+                    transition: 0.3s;
+                    &:hover{
+                        background-color: $color-green;
+                        color: #fff;
+                        &:last-child{
+                            border-radius: 0 0 15px 15px;
+                        }
+                    }
+                }
             }
         }
     }
     &__input{
-        border: none;
-        outline: none;
-        padding-right: 72px;
         background-color: $color-gray;
+        padding: 3px 0 3px 24px;
+		border: none;
+		outline: none;
+		background-color: transparent;
+        border-left: 2px solid #D1D1D1;
+        color: #A9A9A9;
+		min-width: 230px;
+		&::placeholder {
+            color: #A9A9A9;
+		}
+    }
+    &__icon{
+        transition: 0.3s;
+        &:hover{
+            transform: rotate(-90deg);
+        }
     }
     &__person{
         margin-right: 42px;
@@ -138,4 +157,50 @@
             margin-right: 0;
         }
     }
+}
+.dropdown {
+	&__wrapper {
+		display: flex;
+		padding: 16px 0;
+		flex-wrap: wrap;
+	}
+	&__title {
+		@include font(16px, 500, 22px);
+		position: relative;
+		margin-right: 54px;
+		cursor: pointer;
+        &.arrow{
+            &::before{
+                right: -12px;
+            }
+            &::after{
+                right: -15px;
+            }
+        }
+	}
+	&__list {
+		display: none;
+        position: absolute;
+        z-index: 1;
+        background-color: $color-gray;
+        top: 40px;
+        border: 1px solid #d1d1d1;
+        border-top: none;
+        border-radius: 0 0 12px 12px;
+		&.is-active {
+			display: block;
+			z-index: 1;
+        }
+        li{
+            padding: 10px 10px 10px 5px;
+            transition: 0.3s;
+            &:hover{
+                color: #fff;
+                background-color: $color-green;
+                &:last-child{
+                    border-radius: 0 0 12px 12px;
+                }
+            }
+        }
+	}
 }

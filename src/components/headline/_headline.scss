@@ -1,0 +1,10 @@
+.headline{
+    margin-top: 160px;
+    &__top{
+        justify-content: space-between;
+        margin-bottom: 37px;
+    }
+    &__content{
+        margin: 0 -16px;
+    }
+}

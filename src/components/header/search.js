@@ -8,9 +8,9 @@ const Search = () =>{
         <div class="relative">
             ${p.outerHTML}
             <ul class="header__description--drop" id="categories__drop">
-                <li>AAAAA</li>
-                <li>BBBBB</li>
-                <li>CCCCC</li>
+                <li>All categories</li>
+                <li>All categories</li>
+                <li>All categories</li>
             </ul>
         </div>
         <label>

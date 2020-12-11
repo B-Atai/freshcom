@@ -68,7 +68,7 @@ const Customers = () => {
     document.body.append(tagCustomers);
     return tagCustomers;
 }
-Customers();
+export default Customers;
 
 $(document).ready(function(){
     $('.slider').slick({

@@ -1,5 +1,6 @@
 import Sidebar from "../sidebar/sidebar.js";
-import Product from "../product/product.js";
+import Product from "../hero/product.js";
+import { menuData, products } from "../hero/const.js";
 const Selling = () => {
     const tagSelling = document.createElement('section');
     tagSelling.className = "selling";
@@ -7,12 +8,10 @@ const Selling = () => {
     <div class="container">
         <div class="row">
             <div class="col-3">
-                ${Sidebar('Best selling products','Kitchen','Meat and fish','Special nutrition','Pharmacy','Baby')}
+                ${Sidebar(menuData[1].title, menuData[1].listItems, menuData[1].btnText)}
             </div>
             <div class="col-9 row selling__block">
-                ${Product('1.48 USD')}
-                ${Product('0.28 USD')}
-                ${Product('1.12 USD')}
+                ${products.map((item) => Product(item)).join('')}
             </div>
         </div>
     </div>
@@ -32,4 +31,4 @@ const Selling = () => {
     headerCounter()
     return tagSelling;
 }
-Selling();
+export default Selling;

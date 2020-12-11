@@ -1,5 +1,6 @@
 import Sidebar from "../sidebar/sidebar.js";
-import Product from "../product/product.js";
+import Product from "../hero/product.js";
+import { menuData, products } from "../hero/const.js";
 const Farmers = () => {
     const tagFarm = document.createElement('section');
     tagFarm.className = "farmes";
@@ -7,12 +8,10 @@ const Farmers = () => {
     <div class="container">
         <div class="row">
             <div class="col-3">
-                ${Sidebar('Best from Farmers','Carrots','Tomatoes','Potatoes','Chicken','Pork')}
+                ${Sidebar(menuData[2].title, menuData[2].listItems, menuData[2].btnText)}
             </div>
             <div class="col-9 row selling__block">
-                ${Product('1.48 USD')}
-                ${Product('0.28 USD')}
-                ${Product('1.12 USD')}
+                ${products.map((item) => Product(item)).join('')}
             </div>
         </div>
     </div>
@@ -32,4 +31,4 @@ const Farmers = () => {
     headerCounter()
     return tagFarm;
 }
-Farmers();
+export default Farmers;

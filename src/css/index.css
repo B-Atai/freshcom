@@ -211,13 +211,8 @@ span {
   align-items: center;
 }
 
-.header__search label {
-  margin-left: 24px;
-}
-
 .header__description {
   padding-right: 48px;
-  border-right: 1px solid #d1d1d1;
   font-size: 15px;
   font-weight: 700;
   font-family: sans-serif;
@@ -225,25 +220,25 @@ span {
 }
 
 .header__description:hover {
-  color: #6A983C;
+  transform: scale(0.95);
 }
 
 .header__description--drop {
   display: none;
   position: absolute;
-  left: -4px;
+  left: -10px;
   top: 31px;
   background-color: #F9F9F9;
   border: 1px solid #d1d1d1;
   border-top: none;
   border-radius: 0 0 15px 15px;
   text-align: center;
-  width: 70%;
+  width: 100%;
 }
 
 .header__description--drop li {
   color: #151515;
-  margin: 10px 0;
+  padding: 10px 0;
   font: inherit;
 }
 
@@ -252,11 +247,40 @@ span {
   z-index: 1;
 }
 
+.header__description--drop.is-down li {
+  transition: 0.3s;
+}
+
+.header__description--drop.is-down li:hover {
+  background-color: #6A983C;
+  color: #fff;
+}
+
+.header__description--drop.is-down li:hover:last-child {
+  border-radius: 0 0 15px 15px;
+}
+
 .header__input {
+  background-color: #F9F9F9;
+  padding: 3px 0 3px 24px;
   border: none;
   outline: none;
-  padding-right: 72px;
-  background-color: #F9F9F9;
+  background-color: transparent;
+  border-left: 2px solid #D1D1D1;
+  color: #A9A9A9;
+  min-width: 230px;
+}
+
+.header__input::placeholder {
+  color: #A9A9A9;
+}
+
+.header__icon {
+  transition: 0.3s;
+}
+
+.header__icon:hover {
+  transform: rotate(-90deg);
 }
 
 .header__person {
@@ -332,12 +356,61 @@ span {
   margin-right: 0;
 }
 
-.hero {
-  margin-top: 64px;
+.dropdown__wrapper {
+  display: flex;
+  padding: 16px 0;
+  flex-wrap: wrap;
 }
 
-.hero__item {
-  margin: 0 -15px;
+.dropdown__title {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 22px;
+  position: relative;
+  margin-right: 54px;
+  cursor: pointer;
+}
+
+.dropdown__title.arrow::before {
+  right: -12px;
+}
+
+.dropdown__title.arrow::after {
+  right: -15px;
+}
+
+.dropdown__list {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #F9F9F9;
+  top: 40px;
+  border: 1px solid #d1d1d1;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+}
+
+.dropdown__list.is-active {
+  display: block;
+  z-index: 1;
+}
+
+.dropdown__list li {
+  padding: 10px 10px 10px 5px;
+  transition: 0.3s;
+}
+
+.dropdown__list li:hover {
+  color: #fff;
+  background-color: #6A983C;
+}
+
+.dropdown__list li:hover:last-child {
+  border-radius: 0 0 12px 12px;
+}
+
+.hero {
+  margin-top: 64px;
 }
 
 .hero__banners {
@@ -390,35 +463,6 @@ span {
   background-color: #151515;
 }
 
-.sidebar__title {
-  font-size: 18px;
-  font-weight: 600;
-  font-family: sans-serif;
-  margin-bottom: 16px;
-}
-
-.sidebar__links {
-  font-size: 14px;
-  font-weight: 400;
-  font-family: sans-serif;
-  margin-bottom: 12px;
-  text-decoration: underline;
-  color: #6A983C;
-  transition: 0.3s;
-}
-
-.sidebar__links:hover {
-  color: #151515;
-}
-
-.selling {
-  margin-top: 132px;
-}
-
-.selling__block {
-  margin: 0 -16px;
-}
-
 .product {
   border: 1px solid #d1d1d1;
   border-radius: 12px;
@@ -430,7 +474,7 @@ span {
 }
 
 .product__picture {
-  margin: 0 auto;
+  width: 100%;
 }
 
 .product__title {
@@ -440,6 +484,11 @@ span {
   margin-top: 16px;
   line-height: 22px;
   color: #151515;
+}
+
+.product__image {
+  width: 100%;
+  border-radius: 12px;
 }
 
 .product__description {
@@ -462,6 +511,51 @@ span {
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   line-height: 27px;
+}
+
+.product__flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.product__old-price {
+  display: none;
+  position: absolute;
+  bottom: -50%;
+}
+
+.product__discount {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.sidebar__title {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: sans-serif;
+  margin-bottom: 16px;
+}
+
+.sidebar__link {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: sans-serif;
+  margin-bottom: 12px;
+  text-decoration: underline;
+  color: #6A983C;
+  transition: 0.3s;
+}
+
+.sidebar__link:hover {
+  color: #151515;
+}
+
+.selling {
+  margin-top: 132px;
 }
 
 .farmes {
