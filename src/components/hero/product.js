@@ -26,8 +26,6 @@ const Product = (item) => {
     p.innerHTML = item.description;
     span.innerHTML = `${item.price} USD`;
     a.innerHTML = `Buy now`;
-    spanOldPrice.innerHTML = `48.56`;
-    spanDiscount.innerHTML = `36%`;
   
     divItem.append(img);
     divItem.append(h3);

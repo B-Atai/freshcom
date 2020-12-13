@@ -139,6 +139,10 @@ span {
   color: #151515;
 }
 
+.col-2 {
+  width: 16.6%;
+}
+
 .col-3 {
   width: 25%;
 }
@@ -790,4 +794,12 @@ span {
   font-weight: 500;
   font-family: "Poppins", sans-serif;
   margin-bottom: 16px;
+}
+
+.footer {
+  margin-top: 128px;
+}
+
+.footer__top {
+  justify-content: space-between;
 }

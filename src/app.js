@@ -1,13 +1,13 @@
 import Header from "./components/header/index.js";
 import Home from './pages/home.js';
-
+import Footer from './components/footer/index.js'
 const root = () => {
   const rootDiv = document.createElement('div');
   rootDiv.setAttribute('id', 'root');
   rootDiv.append(Header());
-
   rootDiv.append(Home());
-
+  rootDiv.append(Footer());
+  
   document.body.append(rootDiv);
   const headerDrop = () => {
       const categoriesBtn = document.querySelector('.header__description')

@@ -115,3 +115,22 @@ export const menuData = [
       img: '/src/images/smallblog3.png',
     },
   ];
+
+  export const footerItems = [
+    {
+      title: 'Get in touch',
+      listItems: ['About Us', 'Careers', 'Press Releases', 'Blog']
+    },
+    {
+      title: 'Connections',
+      listItems: ['Facebook', 'Twitter', 'Instagram', 'Youtube', 'LinkedIn']
+    },
+    {
+      title: 'Earnings',
+      listItems: ['Become an Affiliate', 'Advertise your product', 'Sell on Market']
+    },
+    {
+      title: 'Account',
+      listItems: ['Your account', 'Returns Centre', '100 % purchase protection', 'Chat with us', 'Help']
+    },
+  ];
