@@ -1,6 +1,6 @@
 import Sidebar from "../sidebar/sidebar.js";
 import Product from "../hero/product.js";
-import { menuData, products } from "../hero/const.js";
+import { menuData, products } from "../const.js";
 const Selling = () => {
     const tagSelling = document.createElement('section');
     tagSelling.className = "selling";

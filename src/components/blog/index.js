@@ -1,4 +1,6 @@
 import Bigblog from './bigblog.js'
+import middleblog from './middleblog.js'
+import smallblog from './smallblog.js';
 const Blog = () => {
     const tagBlog = document.createElement('section');
     tagBlog.className = "blog";
@@ -10,6 +12,8 @@ const Blog = () => {
         </div>
         <div class='row blog__content'>
             ${Bigblog()}
+            ${middleblog()}
+            ${smallblog()}
         </div>
     </div>
     `;

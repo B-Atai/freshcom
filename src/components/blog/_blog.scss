@@ -8,6 +8,10 @@
             font-size: 18px;
         }
     }
+    &__content{
+        justify-content: space-between;
+        margin: 0 -16px;
+    }
     .tips{
         background: #F4F8EC;
         border-radius: 12px;
@@ -21,7 +25,12 @@
         line-height: 16px;
     }
     .author{
-        margin: 0 16px 0 8px ;
+        margin-right: 16px;
+    }
+    .bigblog,
+    .middleblog,
+    .smallblog{
+        margin: 0 16px;
     }
 }
 .bigblog{
@@ -48,12 +57,45 @@
     &__description{
         @include font(22px,600, $font-poppins);
         margin-bottom: 8px;
+        line-height: 33px;
     }
     &__info{
         align-items: center;
-        
+    }
+    .author{
+        margin-right: 16px;
+        margin-left: 8px;
     }
 }
 .middleblog{
-    
+    &__picture{
+        width: 100%;
+    }
+    &__tips{
+        margin: 24px 0 8px;
+    }
+    &__description{
+        @include font(18px,600, $font-poppins);
+        line-height: 27px;
+        margin-bottom: 16px;
+    }
+}
+.smallblog{
+    &__items{
+        margin-bottom: 32px;
+        align-items: center;
+    }
+    &__info{
+        flex-direction: column;
+    }
+    &__picture{
+        margin-left: 48px;
+        min-width: 96px;
+        min-height: 96px;
+        border-radius: 12px;
+    }
+    &__description{
+        @include font(15px, 500, $font-poppins);
+        margin-bottom: 16px;
+    }
 }

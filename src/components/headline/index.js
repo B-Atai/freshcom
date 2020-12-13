@@ -1,5 +1,5 @@
 import Product from "../hero/product.js";
-import {headlines} from "../hero/const.js";
+import {headlines} from "../const.js";
 const Headline = () => {
     const tagHeadline = document.createElement('section');
     tagHeadline.className = "headline";

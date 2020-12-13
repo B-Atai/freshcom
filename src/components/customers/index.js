@@ -1,5 +1,5 @@
 import content from './content.js';
-import { customs } from "../hero/const.js";
+import { customs } from "../const.js";
 const Customers = () => {
     const tagCustomers = document.createElement('section');
     tagCustomers.className = "customers";
