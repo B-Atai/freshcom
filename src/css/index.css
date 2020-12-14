@@ -803,3 +803,71 @@ span {
 .footer__top {
   justify-content: space-between;
 }
+
+.top__title {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  line-height: 27px;
+  color: #151515;
+  margin-bottom: 16px;
+}
+
+.top__link {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  line-height: 19px;
+  color: #6A983C;
+  margin-bottom: 16px;
+  transition: 0.3s;
+}
+
+.top__link:hover {
+  color: #151515;
+}
+
+.mid__title {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  line-height: 27px;
+  margin-bottom: 16px;
+}
+
+.mid__list {
+  flex-wrap: wrap;
+}
+
+.mid__item {
+  margin: 0 16px 16px 0;
+  background-color: #F9F9F9;
+  padding: 4px 10px;
+  border-radius: 12px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.mid__item:hover {
+  background-color: #151515;
+}
+
+.mid__item:hover a {
+  color: #6A983C;
+}
+
+.mid__link {
+  font-size: 12px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s;
+  color: #151515;
+}
+
+.mid__text {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 48px;
+}

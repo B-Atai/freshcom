@@ -11,6 +11,7 @@ const item = (description, author, date, img) => {
     const image = document.createElement('img')
     image.className = 'smallblog__picture'
     image == `${img}`;
+    image.src = img;
     div.appendChild(image)
     return div.outerHTML;
 }
