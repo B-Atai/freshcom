@@ -550,10 +550,6 @@ span {
   transition: 0.3s;
 }
 
-.sidebar__link:hover {
-  color: #151515;
-}
-
 .selling {
   margin-top: 132px;
 }
@@ -606,7 +602,7 @@ span {
   display: flex !important;
   justify-content: center;
   position: relative;
-  border: 1px solid red;
+  border: 1px solid #f1f1f1;
   border-radius: 12px;
   padding: 24px 32px 40px 32px;
   margin-bottom: 25px;
@@ -870,4 +866,5 @@ span {
   font-weight: 600;
   font-family: "Open Sans", sans-serif;
   margin-top: 48px;
+  margin-bottom: 64px;
 }

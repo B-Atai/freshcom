@@ -55,5 +55,6 @@
     &__text{
         @include font(14px, 600, $font-open);
         margin-top: 48px;
+        margin-bottom: 64px;
     }
 }

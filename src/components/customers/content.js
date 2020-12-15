@@ -1,13 +1,12 @@
-const Content = (description, name) => {
+const Content = (description, name, img) => {
     const tagFarm = document.createElement('div');
-    // const img = document.createElement('img');
-    // img.className = 'customers__img'
     tagFarm.className = "customers__item col-3";
     tagFarm.innerHTML = `
         <span class="customers__description">
         ${description}
         </span>
         <span class="customers__name">${name}</span>
+        <img src=${img} alt='' class='customers__img'>
     `;
     return tagFarm.outerHTML;
 }
